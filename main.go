@@ -1,15 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"main/app/models"
+	"main/app/controllers"
 	"main/config"
 	"main/utils"
 )
 
-
-
 func main() {
 	utils.LoggingSettings(config.Config.LogFile)
-	fmt.Println(models.DbConnection)
+	controllers.StreamIngestionData()
+	controllers.StartWebServer()
 }
