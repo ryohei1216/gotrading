@@ -7,7 +7,7 @@ import (
 )
 
 type Candle struct {
-	ProductCode string				`json:""product_code`
+	ProductCode string				`json:"product_code"`
 	Duration    time.Duration	`json:"duration"`
 	Time        time.Time			`json:"time"`
 	Open        float64				`json:"open"`
