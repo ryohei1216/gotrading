@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"main/app/controllers"
 	"main/config"
 	"main/utils"
@@ -9,5 +10,6 @@ import (
 func main() {
 	utils.LoggingSettings(config.Config.LogFile)
 	controllers.StreamIngestionData()
-	controllers.StartWebServer()
+	log.Println(controllers.StartWebServer())
 }
+
