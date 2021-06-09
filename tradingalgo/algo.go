@@ -1,9 +1,8 @@
 package tradingalgo
 
 import (
-	"math"
-
 	"github.com/markcheno/go-talib"
+	"math"
 )
 
 func minMax(inReal []float64) (float64, float64) {

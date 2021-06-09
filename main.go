@@ -12,4 +12,3 @@ func main() {
 	controllers.StreamIngestionData()
 	log.Println(controllers.StartWebServer())
 }
-

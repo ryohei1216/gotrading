@@ -7,14 +7,14 @@ import (
 )
 
 type Candle struct {
-	ProductCode string				`json:"product_code"`
-	Duration    time.Duration	`json:"duration"`
-	Time        time.Time			`json:"time"`
-	Open        float64				`json:"open"`
-	Close       float64				`json:"close"`
-	High        float64				`json:"high"`
-	Low         float64				`json:"low"`
-	Volume      float64				`json:"volume"`
+	ProductCode string        `json:"product_code"`
+	Duration    time.Duration `json:"duration"`
+	Time        time.Time     `json:"time"`
+	Open        float64       `json:"open"`
+	Close       float64       `json:"close"`
+	High        float64       `json:"high"`
+	Low         float64       `json:"low"`
+	Volume      float64       `json:"volume"`
 }
 
 func NewCandle(productCode string, duration time.Duration, timeDate time.Time, open, close, high, low, volume float64) *Candle {
@@ -84,7 +84,6 @@ func CreateCandleWithDuration(ticker bitflyer.Ticker, productCode string, durati
 	currentCandle.Save()
 	return false
 }
-
 
 func GetAllCandle(productCode string, duration time.Duration, limit int) (dfCandle *DataFrameCandle, err error) {
 	tableName := GetCandleTableName(productCode, duration)
